@@ -1,5 +1,6 @@
 resource "aws_route53_record" "roboshop" {
-  count = 2  
+  # count = 2
+  count = length(var.ec2_tags)  
   zone_id = "${var.zone_id}"
   name    = "${var.ec2_tags[count.index]}.${var.domain_name}" # mongodb.tirusatrapu.fun
   type    = "A"

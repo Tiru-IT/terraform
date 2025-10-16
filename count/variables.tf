@@ -1,5 +1,5 @@
 variable "ec2_tags" {
-    default = ["mongodb", "mysql"]
+    default = ["mongodb", "redis", "mysql", "rabbitmq", "catalogue", "user", "cart", "shipping", "payment", "frontend"]
 }
 
 variable "zone_id" {
